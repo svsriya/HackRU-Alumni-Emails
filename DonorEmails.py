@@ -14,8 +14,8 @@ num_cols = sheet.ncols
 data = [ [sheet.cell_value(r, c) for c in range( num_cols )] for r in range(num_rows)]
 
 #email login info
-your_email = 'svsriya@gmail.com'
-temp_pwd = 'dkgrhurtmzsqfgqq'
+your_email = 'your_email_here'
+temp_pwd = 'your_password'
 
 #cycles through each row in the spreadsheet to get necessary info for email and sends email to each donor
 for row in range( 1, num_rows ):
@@ -30,7 +30,7 @@ for row in range( 1, num_rows ):
 
 	#parameters of message
 	msg['From'] = your_email
-	msg['To'] = your_email
+	msg['To'] = "reciever_of_email"
 	msg['Subject'] = "Email Application"
 
 	#add in the message body
