@@ -1,0 +1,2 @@
+# Donor-Emails-Program
+This project is specifically for thank you emails to donors of a nonprofit organization. The end product will read an excel spreadsheet, take the names of each donor, and send them an email based on the cause they have donated for. Currently, I am working on formatting the email nicely using HTML, and will later add in the necessary details to have it send legitimate sounding emails.
