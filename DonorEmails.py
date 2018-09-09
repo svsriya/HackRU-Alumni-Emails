@@ -4,14 +4,14 @@ import xlrd
 import smtplib
 
 # email login info
-your_email = 'blah@email.com'
-temp_pwd = 'greatpassword1234'
+your_email = 'savmaplz@pseudo.org'
 
 # open the excel file
 excel_loc = "/Users/svsriya/Documents/PythonPrograms/EmailProgram/Practice.xlsx"
 
 class Person:
 
+	numEmails = 0
 	# this makes it easier to handle people's names who appear multiple times on the excel
 	def __init__( self, email, causes ):
 		self.email = email
@@ -110,8 +110,9 @@ def send_email( to_email, from_email, password, body ):
 	msg.attach(MIMEText(body, 'plain'))
 
 	# server for whatever email platform 
-	mail = smtplib.SMTP_SSL( 'smtpout.secureserver.net: 465' )
+	mail = smtplib.SMTP( 'smtp.gmail.com:587' )
 	mail.ehlo()
+	mail.starttls()
 
 	# login credentials
 	mail.login( from_email, password )
@@ -138,8 +139,13 @@ def main():
 		email_body = custom_ty_note( name, causes_list )
 		# print email_body + "\n"
 		print send_email( email, your_email, temp_pwd, email_body )
-		break
-
+		######
+		Person.numEmails += 1
+		print "Number of emails sent: " + str(Person.numEmails)
+		if Person.numEmails == 3:
+			print "\nToday's limit has been reached. Take some rest mom!!!\n"
+			break
+		######
 
 if __name__ == '__main__':
 	 main()		
