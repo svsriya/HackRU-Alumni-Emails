@@ -1,2 +1,2 @@
-# Donor-Emails-Program
-This project is specifically for thank you emails to donors of a nonprofit organization. The end product will read an excel spreadsheet, take the names of each donor, and send them an email based on the cause they have donated for. Currently, I am working on formatting the email nicely using HTML, and will later add in the necessary details to have it send legitimate sounding emails.
+# Donor-Emails-Program (but for HackRU!)
+To send emails to alumni for HackRU mentoring, I decided to edit the Donors Emails Program I had so I could easy send out personalized emails within seconds (because for some dumb reason I didn't want to google the easier way of doing this). Who would've thought this would come in handy!
